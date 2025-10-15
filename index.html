@@ -365,6 +365,51 @@
                 
                 <!-- Error Message -->
                 <div id="trackingError" class="hidden bg-red-50 border border-red-300 p-3 rounded-lg mb-4 text-red-700 text-sm"></div>
+                <!-- Demo Credentials Info -->
+                <div class="bg-blue-50 border border-blue-300 p-3 rounded-lg mb-4 text-blue-700 text-sm">
+                    <p class="font-medium mb-1">Demo Credentials (for testing):</p>
+                    <p>WhistleID: WBL-9J47T2R1P8 | Passphrase: test123</p>
+                </div>
+                
+                <button onclick="trackReport()" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg">
+                    Track Report
+                </button>
+            </div>
+            
+            <div id="trackingResults" class="hidden">
+                <div class="bg-blue-50 border border-blue-300 p-6 rounded-lg mb-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Report Status</h3>
+                        <div class="tooltip">
+                            <span class="text-green-600 text-sm flex items-center space-x-1">
+                                <span>🔗</span>
+                                <span>Evidence Integrity Confirmed</span>
+                            </span>
+                            <div class="tooltip-text">
+                                A cryptographic hash of your evidence was anchored to a public ledger on December 15, 2024 at 14:32 UTC. This guarantees the files have not been tampered with since they were reported.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <span class="text-gray-700">Report Received - Dec 15, 2024</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <span class="text-gray-700">Under Review - Dec 16, 2024</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <span class="text-gray-700">Investigation Initiated - Dec 18, 2024</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 bg-gray-400 rounded-full"></div>
+                            <span class="text-gray-500">Action Taken - Pending</span>
+                        </div>
+                    </div>
+                </div>
 
 
 
