@@ -410,6 +410,40 @@
                         </div>
                     </div>
                 </div>
+                <!-- Secure Message Center -->
+                <div class="bg-white shadow-lg border border-gray-200 p-6 rounded-lg">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <h3 class="text-lg font-semibold text-gray-900">Secure Message Center</h3>
+                        <span class="bg-green-600 text-xs px-2 py-1 rounded text-white">End-to-End Encrypted</span>
+                    </div>
+                    
+                    <div id="messageHistory" class="bg-gray-50 border border-gray-200 p-4 rounded-lg mb-4 h-64 overflow-y-auto">
+                        <div class="space-y-3">
+                            <div class="bg-blue-600 p-3 rounded-lg max-w-xs">
+                                <p class="text-sm text-white">Case Officer: Thank you for your report. We need additional information about the timeline of events. Can you provide more specific dates?</p>
+                                <span class="text-xs text-blue-200">Dec 17, 2024 - 10:30 AM</span>
+                            </div>
+                            <div class="bg-green-600 p-3 rounded-lg max-w-xs ml-auto">
+                                <p class="text-sm text-white">You: The incidents occurred between March 15-20, 2024. I have additional documentation if needed.</p>
+                                <span class="text-xs text-green-200">Dec 17, 2024 - 2:15 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-2">
+                        <input type="text" id="messageInput" placeholder="Type your secure message..." class="flex-1 bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900">
+                        <button onclick="sendMessage()" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">Send</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8">
+                <button onclick="showHome()" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-lg">
+                    Back to Home
+                </button>
+            </div>
+        </div>
+    </div>
 
 
 
