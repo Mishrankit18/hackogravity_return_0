@@ -56,3 +56,92 @@
                 </div>
             </div>
         </div>
+      <!-- Voice Recording Interface -->
+        <div id="voiceReportForm" class="hidden max-w-4xl mx-auto fade-in">
+            <div class="bg-white shadow-lg border border-gray-200 p-8 rounded-lg text-center">
+                <h2 class="text-3xl font-bold mb-6 text-green-600">🎤 Voice Complaint Recording</h2>
+                
+                <div class="bg-green-50 border border-green-300 p-4 rounded-lg mb-6">
+                    <p class="text-green-800 text-sm mb-2">🔒 Your voice recording will be automatically encrypted and anonymized</p>
+                    <p class="text-green-700 text-xs">Voice patterns will be altered to protect your identity while preserving the content</p>
+                </div>
+                
+                <div id="recordingControls" class="space-y-6">
+                    <div class="text-center">
+                        <div id="recordingStatus" class="text-lg font-medium text-gray-700 mb-4">Ready to record your complaint</div>
+                        <div id="recordingTimer" class="text-2xl font-mono text-blue-600 mb-6">00:00</div>
+                    </div>
+                    
+                    <div class="flex justify-center space-x-4">
+                        <button id="startRecordBtn" onclick="startRecording()" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-colors">
+                            🔴 Start Recording
+                        </button>
+                        <button id="stopRecordBtn" onclick="stopRecording()" class="hidden bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-colors">
+                            ⏹️ Stop Recording
+                        </button>
+                        <button id="playRecordBtn" onclick="playRecording()" class="hidden bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-medium transition-colors">
+                            ▶️ Play Back
+                        </button>
+                    </div>
+                    
+                    <div id="recordingWaveform" class="hidden bg-gray-100 border border-gray-300 rounded-lg p-4 h-20 flex items-center justify-center">
+                        <div class="flex space-x-1 items-end">
+                            <div class="w-2 bg-green-500 rounded animate-pulse" style="height: 20px;"></div>
+                            <div class="w-2 bg-green-500 rounded animate-pulse" style="height: 35px; animation-delay: 0.1s;"></div>
+                            <div class="w-2 bg-green-500 rounded animate-pulse" style="height: 25px; animation-delay: 0.2s;"></div>
+                            <div class="w-2 bg-green-500 rounded animate-pulse" style="height: 40px; animation-delay: 0.3s;"></div>
+                            <div class="w-2 bg-green-500 rounded animate-pulse" style="height: 30px; animation-delay: 0.4s;"></div>
+                            <div class="w-2 bg-green-500 rounded animate-pulse" style="height: 45px; animation-delay: 0.5s;"></div>
+                            <div class="w-2 bg-green-500 rounded animate-pulse" style="height: 25px; animation-delay: 0.6s;"></div>
+                            <div class="w-2 bg-green-500 rounded animate-pulse" style="height: 35px; animation-delay: 0.7s;"></div>
+                        </div>
+                    </div>
+                    
+                    <div id="voiceComplaintDetails" class="hidden space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-left">Complaint Category *</label>
+                            <select id="voiceComplaintType" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900">
+                                <option value="">Select complaint type...</option>
+                                <option value="financial-fraud">Financial Fraud</option>
+                                <option value="misuse-power">Misuse of Power</option>
+                                <option value="regulatory-violation">Regulatory Violation</option>
+                                <option value="corruption">Corruption</option>
+                                <option value="safety-violation">Safety Violation</option>
+                                <option value="discrimination">Discrimination</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium mb-2 text-left">Government Entity *</label>
+                            <select id="voiceGovernmentEntity" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900">
+                                <option value="">Select entity...</option>
+                                <option value="ministry-finance">Ministry of Finance</option>
+                                <option value="ministry-health">Ministry of Health</option>
+                                <option value="local-municipality">Local Municipality</option>
+                                <option value="police-department">Police Department</option>
+                                <option value="regulatory-agency">Regulatory Agency</option>
+                                <option value="other-entity">Other Government Entity</option>
+                            </select>
+                        </div>
+                        
+                        <div class="bg-yellow-50 border border-yellow-300 p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2 text-yellow-800">Set Secure Passphrase</h4>
+                            <input type="password" id="voicePassphrase" placeholder="Enter a memorable passphrase..." class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900">
+                            <p class="text-yellow-700 text-xs mt-2">You'll need this to track your voice complaint</p>
+                        </div>
+                        
+                        <button onclick="submitVoiceReport()" id="submitVoiceBtn" class="w-full bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold disabled:bg-gray-400 disabled:cursor-not-allowed" disabled>
+                            Submit Voice Complaint
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <button onclick="showHome()" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-lg">
+                        Back to Home
+                    </button>
+                </div>
+            </div>
+        </div>
+
