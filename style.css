@@ -17,3 +17,11 @@ body {
             from { transform: translateX(-100%); }
             to { transform: translateX(0); }
         }
+.pulse-glow {
+            animation: pulseGlow 2s infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(37, 99, 235, 0.6); }
+        }
