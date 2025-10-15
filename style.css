@@ -25,3 +25,54 @@ body {
             0%, 100% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.3); }
             50% { box-shadow: 0 0 30px rgba(37, 99, 235, 0.6); }
         }
+.drag-over {
+            border-color: #22c55e !important;
+            background-color: rgba(34, 197, 94, 0.1) !important;
+        }
+        
+        .tooltip {
+            position: relative;
+        }
+        
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 300px;
+            background-color: #1f2937;
+            color: white;
+            text-center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1000;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -150px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border: 1px solid #374151;
+            font-size: 14px;
+        }
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .progress-bar {
+            transition: width 0.3s ease;
+        }
+        
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 60s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
