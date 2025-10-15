@@ -189,5 +189,68 @@
                     Continue to Case Details
                 </button>
             </div>
+            <!-- Step 2: Case Details -->
+            <div id="step2" class="step hidden">
+                <h2 class="text-2xl font-bold mb-6 text-blue-600">Step 2: Case Details</h2>
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Nature of Complaint *</label>
+                        <select id="complaintType" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900">
+                            <option value="">Select complaint type...</option>
+                            <option value="financial-fraud">Financial Fraud</option>
+                            <option value="misuse-power">Misuse of Power</option>
+                            <option value="regulatory-violation">Regulatory Violation</option>
+                            <option value="corruption">Corruption</option>
+                            <option value="safety-violation">Safety Violation</option>
+                            <option value="discrimination">Discrimination</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div id="otherComplaintBox" class="hidden mt-3">
+                            <input type="text" id="otherComplaintText" placeholder="Please specify the nature of your complaint..." class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Government Entity *</label>
+                        <select id="governmentEntity" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900">
+                            <option value="">Select entity...</option>
+                            <option value="ministry-finance">Ministry of Finance</option>
+                            <option value="ministry-health">Ministry of Health</option>
+                            <option value="local-municipality">Local Municipality</option>
+                            <option value="police-department">Police Department</option>
+                            <option value="regulatory-agency">Regulatory Agency</option>
+                            <option value="other-entity">Other Government Entity</option>
+                        </select>
+                        <div id="otherEntityBox" class="hidden mt-3">
+                            <input type="text" id="otherEntityText" placeholder="Please specify the government entity..." class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Date of Incident *</label>
+                        <input type="date" id="incidentDate" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Location *</label>
+                        <input type="text" id="location" placeholder="City, State/Province" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Detailed Description *</label>
+                        <textarea id="narrative" rows="6" placeholder="Provide a detailed description of the incident..." class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900"></textarea>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-4 mt-8">
+                    <button onclick="prevStep()" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-3 rounded-lg">
+                        Back
+                    </button>
+                    <button onclick="nextStep()" id="step2Next" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg disabled:bg-gray-400 disabled:cursor-not-allowed" disabled>
+                        Continue to Evidence Upload
+                    </button>
+                </div>
+            </div>
+
 
 
