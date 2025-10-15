@@ -347,6 +347,24 @@
                 </button>
             </div>
         </div>
+      <!-- Tracking Page -->
+        <div id="trackingPage" class="hidden fade-in max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold mb-6 text-blue-600">Track Your Report</h2>
+            
+            <div class="bg-white shadow-lg border border-gray-200 p-6 rounded-lg mb-6">
+                <div class="grid md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-2 text-gray-700">WhistleID</label>
+                        <input type="text" id="trackingId" placeholder="WBL-XXXXXXXXXX" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2 text-gray-700">Passphrase</label>
+                        <input type="password" id="trackingPassphrase" placeholder="Your secure passphrase" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-gray-900">
+                    </div>
+                </div>
+                
+                <!-- Error Message -->
+                <div id="trackingError" class="hidden bg-red-50 border border-red-300 p-3 rounded-lg mb-4 text-red-700 text-sm"></div>
 
 
 
