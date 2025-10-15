@@ -156,4 +156,38 @@
                     <div id="progressBar" class="bg-blue-600 h-2 rounded-full progress-bar" style="width: 25%"></div>
                 </div>
             </div>  
+            <!-- Step 1: Anonymity & Consent -->
+            <div id="step1" class="step fade-in">
+                <h2 class="text-2xl font-bold mb-6 text-blue-600">Step 1: Anonymity & Consent</h2>
+                <div class="bg-white shadow-lg border border-gray-200 p-6 rounded-lg mb-6">
+                    <h3 class="text-lg font-semibold mb-4">Security Recommendations</h3>
+                    <div class="bg-yellow-50 border border-yellow-300 p-4 rounded-lg mb-4">
+                        <p class="text-yellow-800 mb-2">⚠️ For maximum security, we recommend:</p>
+                        <ul class="list-disc list-inside text-yellow-700 text-sm space-y-1">
+                            <li>Use a VPN or Tor Browser</li>
+                            <li>Access from a public computer or network</li>
+                            <li>Clear browser history after submission</li>
+                        </ul>
+                        <a href="#" class="text-yellow-600 underline text-sm mt-2 inline-block">Quick Security Guide →</a>
+                    </div>
+                    
+                    <div class="bg-gray-50 border border-gray-300 p-4 rounded-lg mb-4">
+                        <h4 class="font-semibold mb-3 text-gray-900">Terms & Conditions</h4>
+                        <ul class="text-sm text-gray-700 space-y-2 mb-4">
+                            <li>• No personal information will be stored or logged</li>
+                            <li>• This platform provides anonymity but cannot guarantee complete protection</li>
+                            <li>• You agree to provide truthful information to the best of your knowledge</li>
+                            <li>• Reports are handled confidentially by authorized personnel only</li>
+                        </ul>
+                        <label class="flex items-start space-x-3">
+                            <input type="checkbox" id="consentAll" class="mt-1 w-4 h-4 text-blue-600 bg-white border-gray-300 rounded">
+                            <span class="text-sm font-medium text-gray-900">I agree to all terms and conditions above</span>
+                        </label>
+                    </div>
+                </div>
+                <button onclick="nextStep()" id="step1Next" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg disabled:bg-gray-400 disabled:cursor-not-allowed" disabled>
+                    Continue to Case Details
+                </button>
+            </div>
+
 
